@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      window.location.href = "aboutUs.html";
+      window.location.href = "404.html";
     }
   });
 

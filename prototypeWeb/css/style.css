@@ -28,8 +28,15 @@ h2 {
 
 
 
-.underline{
+.underlineA{
   width: 10rem;
+  height: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61120C;
+}
+.underlineC{
+  width: 12rem;
   height: 6px;
   border-radius: 5px;
   border: none;
