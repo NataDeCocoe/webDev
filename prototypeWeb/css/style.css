@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Poppins;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2vw;
+  font-weight: 550;
+}
+.cus-text{
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+
+
+.underline{
+  width: 10rem;
+  height: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61120C;
+}
+/*Color Scheme*/
+.custom-color {
+  color: #61120C;
+}
+
+.bg-custom {
+  background-color: #61120C;
+}
+
+/*Color Scheme*/
+
+.navbar {
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  padding: 0 30px;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:active {
+  color: #F6AB0F;
+}
+
+.center-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
+.login-form {
+
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-floating input {
+  width: 25vw;
+  height: 50px;
+}
+
+.form-floating label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.form-floating input:focus ~ label {
+  opacity: 1;
+  transform: scale(1) translateY(-1rem);
+}
+
+.btn {
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #F6AB0F;
+
+}
+
+.border-w {
+  width: 10.5%;
+  padding: 0;
+}
+
+/*Error Indicator*/
+.invalid-feedback {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 12px;
+  color: red;
+  display: none;
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+/*Small Screens*/
+@media only screen and (max-width: 415px) {
+  h2 {
+    font-size: 6vw;
+  }
+
+  .border-w {
+    width: 33%;
+  }
+
+  .form-floating input {
+    width: 80vw;
+  }
+}
