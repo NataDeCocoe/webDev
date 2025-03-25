@@ -9,6 +9,7 @@
 
 body {
   font-family: Poppins;
+  height: auto;
   background-color: white;
 }
 
@@ -21,12 +22,26 @@ h2 {
   font-size: 2vw;
   font-weight: 550;
 }
+h3{
+  font-size: 1.5vw;
+  font-weight: 520;
+}
+h4{
+  font-size: 1.3vw;
+
+}
 .cus-text{
   margin-left: 18%;
   margin-right: 18%;
 }
 
-
+.bg-image{
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 430px;
+  left: 750px;
+}
 
 .underlineA{
   width: 10rem;
@@ -41,6 +56,9 @@ h2 {
   border-radius: 5px;
   border: none;
   background-color: #61120C;
+}
+.gap{
+  gap: 15rem;
 }
 /*Color Scheme*/
 .custom-color {
@@ -134,6 +152,16 @@ h2 {
   h2 {
     font-size: 6vw;
   }
+  h3{
+    font-size: 4vw;
+  }
+  h4{
+    font-size: 3vw;
+  }
+  small{
+    font-size: 2vw;
+  }
+
 
   .border-w {
     width: 33%;
@@ -141,5 +169,9 @@ h2 {
 
   .form-floating input {
     width: 80vw;
+  }
+  .responsive{
+    gap: 30px;
+    flex-direction: column;
   }
 }
