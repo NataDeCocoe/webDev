@@ -30,6 +30,7 @@ h4{
   font-size: 1.3vw;
 
 }
+
 .cus-text{
   margin-left: 18%;
   margin-right: 18%;
@@ -60,11 +61,19 @@ h4{
 .gap{
   gap: 15rem;
 }
+.i-gap{
+  gap: 2rem;
+}
 /*Color Scheme*/
 .custom-color {
   color: #61120C;
 }
-
+.c-height{
+  margin-top: -5vh;
+}
+.c-width{
+  width: 36vw;
+}
 .bg-custom {
   background-color: #61120C;
 }
@@ -130,6 +139,38 @@ h4{
   width: 10.5%;
   padding: 0;
 }
+/*Lines*/
+#b-line{
+  width: 4rem;
+  height: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #F8CC50;
+}
+#d-line{
+  position: relative;
+  width: 32rem;
+  height: 6vh;
+  border-radius: 0;
+  border: none;
+  top: 9rem;
+  left: -15rem;
+  z-index: -1;
+  transform: rotate(-30deg);
+  background-color: #61120C;
+}
+#d-line2{
+  position: relative;
+  width: 32rem;
+  height: 4vh;
+  border-radius: 0;
+  border: none;
+  top: -1rem;
+  left: -22rem;
+  transform: rotate(-30deg);
+  z-index: -1;
+  background-color: #F8CC50;
+}
 
 /*Error Indicator*/
 .invalid-feedback {
@@ -147,7 +188,19 @@ h4{
 }
 
 
-/*Small Screens*/
+@media only screen and (min-width: 1440px) {
+  .c-width{
+    width: 34vw;
+  }
+
+  .c-height{
+    height: 11vh;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 415px) {
   h2 {
     font-size: 6vw;
@@ -168,6 +221,16 @@ h4{
   }
 
   .form-floating input {
+    width: 80vw;
+  }
+  .r-input{
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .c-width{
     width: 80vw;
   }
   .responsive{
