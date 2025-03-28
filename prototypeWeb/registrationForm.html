@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="js/validator.js" defer></script>
+    <script src="js/app.js" defer></script>
     <!--Plugins-->
 
     <link rel="icon" href="img/Testament_Logo.png" sizes="any">
 
 </head>
 
-<body class="h-100">
+<body>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm  py-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm  py-3 sticky-nav">
     <div class="container-fluid">
         <h1>
             <font color="#61120C">TESTA</font><font color="#F6AB0F">MENT</font>
@@ -29,16 +30,16 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto toggleButton">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="aboutUs.html">About us</a>
+                    <a class="nav-link "  href="aboutUs.html">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="contactUs.html">Contact us</a>
+                    <a class="nav-link " href="contactUs.html">Contact us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="landingPage.html">Login</a>
+                    <a class="nav-link "  href="landingPage.html">Login</a>
                 </li>
             </ul>
         </div>
@@ -55,38 +56,60 @@
             <div id="b-line"></div>
         </h2>
     </div>
+
     <form id="r-form">
         <div class="d-flex justify-content-center pt-4 i-gap w-1 r-input">
-            <div>
-                <input type="text" class="form-control mb-2" placeholder="First name" required>
+            <div class="form-floating2 mb-1">
+                <input type="text" class="form-control mb-2" id="fname" placeholder="First name" >
+                <div class="invalid-feedback" id="fnameError"></div>
             </div>
-            <div>
-                <input type="text" class="form-control " placeholder="Last name" required>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center pt-5 i-gap w-1 r-input c-height">
-            <div>
-                <input type="email" class="form-control mb-2" placeholder="Email" required>
-            </div>
-            <div>
-                <input type="tel" class="form-control" placeholder="Phone" required>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center mb-2 pt-5 i-gap w-1 r-input c-height">
-            <div>
-                <input type="text" class="form-control c-width" placeholder="Address" required>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center mb-2 pt-5 i-gap w-1 r-input c-height">
-            <div>
-                <input type="password" class="form-control c-width" placeholder="Enter your password" required>
+            <div class="form-floating2">
+                <input type="text" class="form-control" id="lname" placeholder="Last name" >
+                <div class="invalid-feedback" id="lnameError"></div>
             </div>
         </div>
         <div class="d-flex justify-content-center pt-5 i-gap w-1 r-input c-height">
-            <div>
-                <input type="password" class="form-control c-width" placeholder="Confirm your password" required>
+            <div class="form-floating2">
+                <input type="email" class="form-control" id="email" placeholder="Email" >
+                <div class="invalid-feedback" id="remailError"></div>
+            </div>
+            <div class="form-floating2">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone" >
+                <div class="invalid-feedback" id="pError"></div>
             </div>
         </div>
+        <div class="d-flex justify-content-center mb-2 pt-5 i-gap w-1 r-input c-height fixed-w">
+            <div class="form-floating2 mb-1">
+                <input type="text" class="form-control c-width" id="address" placeholder="Address">
+                <div class="invalid-feedback" id="addError"></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mb-2 pt-5 i-gap w-1 r-input c-height fixed-w">
+            <div class="form-floating2 mb-1">
+                <input type="password" class="form-control c-width" id="password" placeholder="Enter your password" >
+                <div class="invalid-feedback" id="rPass"></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pt-5 i-gap w-1 r-input c-height ">
+            <div class="form-floating2">
+                <input type="password" class="form-control c-width" id="confirmPass" placeholder="Confirm your password" >
+                <div class="invalid-feedback" id="conPass"><small>asd</small></div>
+            </div>
+        </div>
+        <div class="terms-condition d-flex justify-content-center pt-3">
+            <div>
+                <input type="checkbox" id="chk-box" required><small class="ml-1 t-size">I agree to the Terms and Condition</small>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pt-2 mt-2">
+            <button type="submit" class="btn btn-primary bg-custom" id="r-button" disabled>Register</button>
+        </div>
+        <div>
+
+        </div>
+    </form>
+
+
 </section>
 
 

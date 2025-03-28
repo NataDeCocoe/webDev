@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Hide error message when typing (Password)
+
   passwordInput.addEventListener("input", function () {
     if (passwordInput.value.trim().length >= 6) {
       passwordInput.classList.remove("is-invalid");
@@ -64,14 +64,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let links = document.querySelectorAll(".nav-link");
-  let currentPage = window.location.pathname.split("/aboutUs.html").pop(); // Get current page filename
+  const links = document.querySelectorAll(".nav-link");
+  const currentPage = window.location.pathname.split("/").pop(); // Get current page file name
 
-  if (currentPage === "") currentPage = "index.html"; // Default to index.html if on root
+
+  links.forEach(link => link.classList.remove("active"));
+
 
   links.forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active"); // Add "active" class to matching link
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById('chk-box');
+  const button = document.getElementById('r-button');
+
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      button.classList.remove("disabled-button");
+      button.classList.add("enabled-button");
+      button.disabled = false; // Enable button
+    } else {
+      button.classList.remove("enabled-button");
+      button.classList.add("disabled-button");
+      button.disabled = true; // Disable button
+    }
+  });
+});
+
+
+
