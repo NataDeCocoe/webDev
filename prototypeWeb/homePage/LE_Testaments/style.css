@@ -92,7 +92,20 @@
     left: 26px;
 }
 
-.desktop .overlap {
+.header1{
+    z-index: 1;
+    width: 528px;
+    height: 55px;
+    top: 30px;
+    background-color: #d9d9d9;
+    position: sticky;
+    left: 350px;
+    border-radius: 20px;
+
+}
+
+
+.desktop  .overlap {
     z-index: 1;
     width: 528px;
     height: 55px;
@@ -324,6 +337,83 @@
     top: 0;
     left: 0;
 }
+
+
+
+
+.Text-Title{
+    position: absolute;
+    width: 426px;
+    top: 130px;
+    left: 250px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+
+.title{
+    font-family: "Poppins-Regular", Helvetica;
+    color: #000000;
+    font-size: 15px;
+    line-height: normal;
+}
+
+
+.category-list {
+
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 35px;
+}
+
+.category-item {
+    top: 160px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.square-bg {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-color: #5e5858;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.category-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.desktop .overlap-4 {
+    width: 1087px;
+    height: 430px;
+    top: 450px;
+    box-shadow: 1px 1px 10px #d9d9d9;
+    position: absolute;
+    left: 250px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {
