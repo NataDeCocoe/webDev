@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      window.location.href = "404.html";
+      window.location.href = "homePage/LE_Testaments/index.html";
     }
   });
 
@@ -98,4 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// shortcut to admin
+document.addEventListener("keydown", function(event) {
+  if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "l") {
+    window.location.href = "adminDashboard.html";
+  }
+});

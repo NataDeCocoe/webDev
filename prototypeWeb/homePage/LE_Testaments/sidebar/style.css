@@ -1,0 +1,265 @@
+:root {
+  --sidebar-width: 250px;
+  --sidebar-collapsed-width: 80px;
+  --sidebar-bg: #f8cc50;
+  --sidebar-text: #000;
+  --sidebar-active-bg: rgba(255, 255, 255, 0.95);
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  transition: width var(--transition-speed) ease;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  /* Added space at the top */
+  padding: 30px 0 20px;
+  padding: 30px 0 20px;
+}
+
+
+.sidebar-footer {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 90%;
+  justify-content: flex-start;
+  position: relative; /* Added for tooltip positioning */
+}
+
+/* 1. Nav Item Hover Effect */
+.nav-item:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.nav-item.active {
+  background-color: var(--sidebar-active-bg);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  filter: brightness(0);
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0;
+}
+
+.nav-label {
+  transition: opacity var(--transition-speed);
+  color: #000;
+}
+
+.sidebar.collapsed .nav-label {
+  opacity: 0;
+  width: 0;
+}
+
+/* 2. Tooltip Hover Effect */
+.nav-tooltip {
+  position: absolute;
+  left: calc(100% + 15px);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  background: #fff;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  display: none; /* Hidden by default */
+}
+
+/* Show tooltip ONLY when sidebar is collapsed */
+.sidebar.collapsed .nav-tooltip {
+  display: block;
+}
+
+/* Show tooltip text on hover */
+.sidebar.collapsed .nav-item:hover .nav-tooltip {
+  opacity: 1;
+}
+
+.toggler {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+/* 3. Toggler Hover Effect */
+.toggler:hover {
+
+  background: rgba(205, 163, 45, 0.65);
+  border-radius: 8px;
+}
+
+.sidebar-toggler span {
+  transition: transform var(--transition-speed);
+}
+
+.sidebar.collapsed .sidebar-toggler span {
+  transform: rotate(180deg);
+}
+
+.menu-toggler {
+  display: none;
+}
+
+
+/* 4. Active Item Hover Effect */
+.nav-item.active:hover {
+  background: #fff;
+}
+
+/* Responsive Design (unchanged) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    align-items: center;
+  }
+
+  .sidebar-footer {
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 0 100px;
+    height: 60px;
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .menu-toggler {
+    display: block;
+  }
+
+  .sidebar:not(.menu-active) .nav-item:not(:first-child) {
+    display: none;
+  }
+
+  .sidebar.menu-active {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar.menu-active .sidebar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar.menu-active .sidebar-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar.menu-active .nav-item {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: flex-start;
+  }
+}
+
+.desktop {
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-speed) ease;
+}
+
+.sidebar.collapsed ~ .desktop {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+}
