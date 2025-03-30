@@ -74,3 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+const resizeMenu = document.getElementById('menu');
+resizeMenu.addEventListener('click', function (e){
+    e.preventDefault();
+    document.body.classList.toggle('sb-collapse');
+})
