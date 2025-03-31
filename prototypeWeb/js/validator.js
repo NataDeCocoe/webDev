@@ -100,7 +100,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // shortcut to admin
 document.addEventListener("keydown", function(event) {
-  if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "l") {
-    window.location.href = "adminDashboard.html";
+  if (event.altKey && event.shiftKey && event.key.toLowerCase() === "l") {
+    let aPanel = document.getElementById('admin');
+    aPanel.classList.remove('hidden');
+    aPanel.classList.add('show')
+
   }
 });
+
+document.addEventListener("click");
+function adminDashboard(){
+  window.location.href = 'adminDashboard.html'
+}
