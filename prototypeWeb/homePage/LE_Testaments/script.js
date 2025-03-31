@@ -1,11 +1,17 @@
 const sidebar = document.querySelector(".sidebar");
 const sidebarToggler = document.querySelector(".sidebar-toggler");
 const menuToggler = document.querySelector(".menu-toggler");
+const img = document.getElementById('bookmark');
 
 // Ensure these heights match the CSS sidebar height values
 let collapsedSidebarHeight = "56px"; // Height in mobile view (collapsed)
 let fullSidebarHeight = "calc(100vh - 32px)"; // Height in larger screen
 
+
+img.addEventListener('click', function (){
+  img.src = 'img/bookmark2.png';
+
+})
 // Toggle sidebar's collapsed state
 sidebarToggler.addEventListener("click", () => {
   sidebar.classList.toggle("collapsed");
@@ -32,3 +38,7 @@ window.addEventListener("resize", () => {
     toggleMenu(sidebar.classList.contains("menu-active"));
   }
 });
+
+// JavaScript solution
+const notifHeight = document.querySelector('.notif').offsetHeight;
+document.querySelector('.overlapNotif').style.height = `${notifHeight}px`;

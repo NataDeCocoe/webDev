@@ -343,7 +343,7 @@
 
 .Text-Title{
     position: absolute;
-    width: 426px;
+    width: 600px;
     top: 130px;
     left: 250px;
     font-family: "Poppins-SemiBold", Helvetica;
@@ -409,8 +409,179 @@
     border-radius: 20px;
 }
 
+.desktop .overlapSB {
+    width: 1087px;
+    height: 350px;
+    top: 250px;
+    box-shadow: 1px 1px 10px #d9d9d9;
+    position: absolute;
+    left: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.desktop .quick-viewSB1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 280px;
+    align-items: center;
+    gap: 10px 117px;
+    position: absolute;
+    top: 70px;
+    left: 22px;
+}
 
 
+
+.desktop .quick-viewSB2 {
+    width: 250px;
+    left: 283px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 280px;
+    align-items: center;
+    gap: 10px 117px;
+    position: absolute;
+    top: 70px;
+}
+
+
+.desktop .quick-viewSB3 {
+    width: 250px;
+    left: 544px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 280px;
+    align-items: center;
+    gap: 10px 117px;
+    position: absolute;
+    top: 70px;
+}
+
+.desktop .quick-viewSB4 {
+    width: 250px;
+    left: 804px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 280px;
+    align-items: center;
+    gap: 10px 117px;
+    position: absolute;
+    top: 70px;
+}
+
+.bookmark{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    top: 1px;
+
+    position: absolute;
+
+    right: 22px;
+    z-index: 1;
+
+}
+
+.bookmark img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    top: 1px;
+
+    position: absolute;
+
+    right: 22px;
+    z-index: 1;
+}
+
+
+
+.overlapNotif {
+    width: 1087px;
+    height: 500px;
+    top: 220px;
+    box-shadow: 1px 1px 10px #d9d9d9;
+    position: absolute;
+    left: 250px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.notifs {
+    padding: 15px;
+    margin: 10px;
+    width: 1050px;
+    height: 100px;
+    border-color: #5e5858;
+    border: 1px solid #d9d9d9;
+    gap: 10px;
+
+
+    box-shadow: 1px 1px 1px 1px #d9d9d9;
+    position: absolute;
+
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nficon{
+    width: 90px;
+    height: 90px;
+
+}
+
+.bookdetail{
+
+
+}
+
+.bookname{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.status1{
+    position: absolute;
+    right: 30px;
+
+    font-size: 20px;
+    font-style: italic;
+    color: #F6AB0F;
+
+}
+
+.status2{
+    position: absolute;
+    right: 30px;
+
+    font-size: 20px;
+    font-style: italic;
+    color: #3CB3D9;
+
+}
+
+.status3{
+    position: absolute;
+    right: 30px;
+
+    font-size: 20px;
+    font-style: italic;
+    color: #348c0c;
+
+}
 
 
 
