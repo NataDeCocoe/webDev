@@ -25,6 +25,10 @@ body.sb-collapse{
 body.labelShow{
     display: block;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 ul{
     list-style: none;
 }
@@ -215,6 +219,71 @@ aside button{
     justify-content: space-between;
     margin-top: 5px;
 }
+/*orders*/
+.ordersStatus{
+    display: grid;
+    gap: .5em;
+    padding: .85em;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, 1fr);
+}
+.ordersCard{
+    min-block-size: 7rem;
+    background-color: pink;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: .5em;
+
+}
+.months{
+    align-content: center;
+    text-align: center;
+    grid-column: 8 / 9;
+}
+.p6Months{
+    align-content: center;
+    text-align: center;
+    grid-column: 9 / 10;
+}
+.orderItemsHeader{
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    min-block-size: 3rem;
+    background-color: #F8CC50;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem 0.3rem 0 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+.orderItemsCon{
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    min-block-size: 3rem;
+    background-color: #ab9f9f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+.orderItemsCon2{
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    min-block-size: 3rem;
+    background-color: #ab9f9f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+
 
 
 
