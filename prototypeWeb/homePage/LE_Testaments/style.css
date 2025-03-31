@@ -583,7 +583,97 @@
 
 }
 
+.Text-Title-Acc{
+    position: absolute;
+    width: 600px;
+    top: 60px;
+    left: 250px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
 
+}
+
+.OrderHistory{
+    position: absolute;
+    width: 600px;
+    top: 470px;
+    left: 250px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+
+.overlapAcc {
+    width: 1087px;
+    height: 500px;
+    top: 550px;
+    box-shadow: 1px 1px 10px #d9d9d9;
+    position: absolute;
+    left: 250px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.Acc{
+    position: absolute;
+    top: 150px;
+    display: flex;
+    gap: 50px;
+
+}
+
+.Contact{
+    display: flex;
+    gap: 30px;
+
+}
+
+.Accdetail{
+
+
+
+}
+
+.Name{
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+
+}
+
+.Contact1, .Contact2{
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: 0;
+    margin-top: 20px;
+
+}
+
+.Address{
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 200;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-top: 20px;
+
+}
 
 
 
