@@ -29,15 +29,15 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <span class="nav-icon material-symbols-rounded currentActive">dashboard</span>
-                <span class="currentActive">Dashboard</span>
+            <a href="adminDashboard.html">
+                <span class="nav-icon material-symbols-rounded ">dashboard</span>
+                <span>Dashboard</span>
             </a>
         </li>
         <li>
             <a href="ordersPage.html">
-                <span class="nav-icon material-symbols-rounded">orders</span>
-                <span>Orders</span>
+                <span class="nav-icon material-symbols-rounded currentActive">orders</span>
+                <span class="currentActive">Orders</span>
             </a>
         </li>
         <li>
@@ -48,40 +48,40 @@
         </li>
     </ul>
 </aside>
-<main class="dashboard">
-    <div class="card totalItems">
-        <p>Total Product</p>
-        <p id="productCounts">30</p>
+<main class="ordersStatus">
+    <div>
+        <h2>Orders List</h2>
     </div>
-    <div class="card registerdUser">
-        <p>Registered Users</p>
-        <p id="rUsersCounts">21,450</p>
+    <div class="months">
+        <span><small>This Month</small></span>
     </div>
-    <div class="card orders">
-        <p><a href="ordersPage.html">Total Orders</a></p>
-        <p id="orderCounts">5,050</p>
+    <div class="p6Months">
+        <span><small>Last 6 Month</small></span>
     </div>
-    <div class="weeklyCard weeklyStats">
-        <div class="chart-title">This Week Statistics</div>
-        <div class="chart-value"><small>P7,854</small></div>
-        <div class="bar-chart">
-            <div class="bar mo"></div>
-            <div class="bar tu"></div>
-            <div class="bar we"></div>
-            <div class="bar th"></div>
-            <div class="bar fr"></div>
-            <div class="bar sa"></div>
-            <div class="bar su"></div>
-        </div>
-        <div class="day-labels">
-            <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
-        </div>
+    <div class="orderItemsHeader">
+        <span>No.</span>
+        <span>Customer Name</span>
+        <span>Product ID</span>
+        <span>Date</span>
+        <span>Amount</span>
+        <span>Order Status</span>
     </div>
-    <div class="card totalSales">
-        <p>Total Sales</p>
-        <p id="salesCount">21,450</p>
+    <div class="orderItemsCon">
+        <span>1</span>
+        <span>Nathaniel Bartolome</span>
+        <span>00001</span>
+        <span>March 2, 2025</span>
+        <span>$ 800</span>
+        <span>Completed</span>
     </div>
-
+    <div class="orderItemsCon2">
+        <span>1</span>
+        <span>Nathaniel Bartolome</span>
+        <span>00029</span>
+        <span>March 2, 2025</span>
+        <span>$ 800</span>
+        <span>Completed</span>
+    </div>
 </main>
 </body>
 </html>
