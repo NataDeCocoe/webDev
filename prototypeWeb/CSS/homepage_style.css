@@ -804,6 +804,11 @@
     display: none;
 }
 
+.footer{
+    background-color: #F6AB0F;
+    height: 10px;
+
+}
 
 
 @media (max-width: 768px) {

@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const confirmBtn = document.getElementById('Bconfirm');
   if (confirmBtn) {
     confirmBtn.addEventListener('click', function() {
-      window.location.href = 'prototypeWeb/landingPage.html';
+      window.location.href = '../HTML/index.html';
     });
   }
 });
