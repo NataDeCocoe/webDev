@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      window.location.href = "HTML/homepage.html";
+      window.location.href = "homepage.html";
     }
   });
 
