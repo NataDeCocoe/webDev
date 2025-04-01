@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      window.location.href = "homePage/LE_Testaments/homepage.html";
+      window.location.href = "homepage.html";
     }
   });
 
