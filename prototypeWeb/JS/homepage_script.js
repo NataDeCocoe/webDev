@@ -41,41 +41,6 @@ window.addEventListener("resize", () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Get the logout link in sidebar
-  const logoutLink = document.getElementById('logoutB');
-
-  // Get logout confirmation dialog
-  const logoutDialog = document.getElementById('logout');
-
-  // Add click event to logout link
-  if (logoutLink) {
-    logoutLink.addEventListener('click', function(e) {
-
-      logoutDialog.classList.remove('hidden');
-      logoutDialog.classList.add('show');
-    });
-  }
-
-  // Cancel button closes the dialog
-  const cancelBtn = document.getElementById('Bcancel');
-  if (cancelBtn) {
-    cancelBtn.addEventListener('click', function() {
-      logoutDialog.classList.add('hidden');
-      logoutDialog.classList.remove('show');
-    });
-  }
-
-  // Confirm button redirects
-  const confirmBtn = document.getElementById('Bconfirm');
-  if (confirmBtn) {
-    confirmBtn.addEventListener('click', function() {
-      window.location.href = 'index.html';
-    });
-  }
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
   const categoryItems = document.querySelectorAll('.category-item');
 
   // Set 'All' as active by default if no category is active
