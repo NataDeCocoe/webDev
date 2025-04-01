@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      window.location.href = "homepage.html";
+      window.location.href = "HTML/homepage.html";
     }
   });
 
@@ -110,5 +110,5 @@ document.addEventListener("keydown", function(event) {
 
 document.addEventListener("click");
 function adminDashboard(){
-  window.location.href = 'adminDashboard.html'
+  window.location.href = 'HTML/adminDashboard.html'
 }
