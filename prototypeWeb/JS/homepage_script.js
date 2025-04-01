@@ -74,6 +74,31 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryItems = document.querySelectorAll('.category-item');
+
+  // Set 'All' as active by default if no category is active
+  if (!document.querySelector('.category-item.active')) {
+    categoryItems[0]?.classList.add('active');
+  }
+
+  categoryItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Only update if clicked item isn't already active
+      if (!this.classList.contains('active')) {
+        categoryItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+
+        // Optional: Add visual feedback
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 200);
+      }
+    });
+  });
+});
 // JavaScript solution
 const notifHeight = document.querySelector('.notif').offsetHeight;
 document.querySelector('.overlapNotif').style.height = `${notifHeight}px`;
